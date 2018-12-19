@@ -1,0 +1,192 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: url(../img/back.jpg);
+}
+.bangtt{
+    width: 700px;
+    height: 500px;
+    background-color: white;
+    margin-top: 50px;
+    transition: all 1s;
+    margin-left:500px;
+    position:absolute;
+    z-index: 10;
+}
+.bangtt1{
+    margin-left:130px;
+    transition: all 1s;
+
+}
+.logo image{
+    margin-top: 18px !important;
+    margin-left: 23px;
+}
+.truong{
+    font-family: 'Baloo', cursive;
+}
+.truong p{
+    margin-left: 20px;
+    font-size: 15px;
+}
+.head{
+    border-bottom: 1px solid hsl(206, 100%, 50%);
+    padding-bottom: 20px;
+}
+.col-md-6{
+    margin-top: 70px;
+}
+.diem{
+    width: 100px !important;
+}
+.col-sm-3{
+    margin-left: 5px;
+}
+.khung{
+    position: relative;
+}
+.bangds{
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    margin-top: 50px;
+    transition: all 1s;
+    position:absolute;
+    right: 0;
+    margin-right: 130px;
+    font-family: 'Baloo', cursive;
+    opacity: 0;
+
+}
+.bangds h1{
+    text-align: center;
+}
+.bangds1{
+    opacity: 1;
+    transition: all 1s;
+    transition-delay: 0.8s
+}
+.ds{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.bangdiem{
+    width: 500px;
+    height: auto;
+    background-color: white;
+    margin-top: 50px;
+    transition: all 1s;
+    right: 0;
+    margin-right: 130px;
+    font-family: 'Baloo', cursive;
+    margin-left: 112px;
+    opacity: 0;
+    margin-top: 546px;
+   
+}
+.bangdiem1{
+    transition: all 1s;
+    opacity: 1;
+}
+.bangdiem h1{
+    text-align: center;
+    padding: 10px 0 20px 0;
+}
+
+
+/* form-ani */
+.group            { 
+    position:relative; 
+    margin-bottom:20px; 
+  }
+input               {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  input:focus         { outline:none; }
+  
+  /* LABEL ======================================= */
+  label                {
+    color:#999; 
+    font-size:17px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:2px;
+    top:10px;
+    font-family: 'Baloo', cursive;
+    transition:0.5s ease all; 
+    -moz-transition:0.5s ease all; 
+    -webkit-transition:0.5s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label        {
+    top:-12px;
+    font-size:14px;
+    color:#5264AE;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar    { position:relative; display:block; width:300px; }
+  .bar1   { position:relative; display:block; width:100px; }
+  .bar:before, .bar:after     {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.5s ease all; 
+    -moz-transition:0.5s ease all; 
+    -webkit-transition:0.5s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to    { width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to    { width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to    { width:0; background:transparent; }
+  }

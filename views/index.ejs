@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	    <title>Quản Lý Sinh Viên</title>
+	</head>
+
+	<body>
+	    <div class="khung">
+	        <div class="bangtt" id="bang">
+	            <div class="col-md-12 head">
+	                <div class="col-md-3 logo">
+	                    <img src="./img/qnu-logo.png" alt="" width="80px;" style="margin-top: 18px; margin-left: 23px;">
+	                </div>
+	                <div class="col-md-9 truong">
+	                    <h1>Thông Tin Sinh Viên</h1>
+	                    <p> Đại Học Quy Nhơn</p>
+	                </div>
+	            </div>
+
+	            <div class="body">
+	                <form id="sv">
+	                    <div class="col-md-6">
+	                        <div class="group">
+	                            <input type="text" required name="ten" id="ten">
+	                            <span class="highlight"></span>
+	                            <span class="bar"></span>
+	                            <label>Name</label>
+	                        </div>
+
+	                        <div class="group">
+	                            <input type="text" required name="email" id="email">
+	                            <span class="highlight"></span>
+	                            <span class="bar"></span>
+	                            <label>Email</label>
+	                        </div>
+
+	                        <div class="group">
+	                            <input type="text" required name="cmnd" id="cmnd">
+	                            <span class="highlight"></span>
+	                            <span class="bar"></span>
+	                            <label>CMND</label>
+	                        </div>
+	                    
+	                    </div>
+	                    <div class="col-md-6">
+	                        <div class="group">
+	                            <input type="text" required name="mssv" id="mssv">
+	                            <span class="highlight"></span>
+	                            <span class="bar"></span>
+	                            <label>MSSV</label>
+	                        </div>
+
+	                        <div class="group">
+	                            <input type="text" required name="sdt" id="sdt">
+	                            <span class="highlight"></span>
+	                            <span class="bar"></span>
+	                            <label>SĐT</label>
+	                        </div>
+	                        <div class="col-md-4">
+	                            <div class="group">
+	                                <input type="text" required class="diem" name="toan" id="toan">
+	                                <span class="highlight"></span>
+	                                <span class="bar1 bar"></span>
+	                                <label>Toán</label>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-4">
+	                            <div class="group">
+	                                <input type="text" required class="diem" name="ly" id="ly">
+	                                <span class="highlight"></span>
+	                                <span class="bar1 bar"></span>
+	                                <label>Lý</label>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-4">
+	                            <div class="group">
+	                                <input type="text" required class="diem" name="hoa" id="hoa">
+	                                <span class="highlight"></span>
+	                                <span class="bar1 bar"></span>
+	                                <label>Hóa </label>
+	                            </div>
+	                        </div>
+
+	                    </div>
+	                </form>
+	            </div>
+	            <center>
+	                <button type="button" class="btn btn-info waves-effect waves-light btn" style="margin-top: 15px; font-family: 'Baloo', cursive;" id="them">
+	                    Thêm Thông Tin
+	                  
+	                    <!-- <i class="fa fa-spinner fa-spin"></i> -->
+	                </button>
+
+	            </center>
+	        </div>
+	        <div class="bangds" id="bangds">
+	            <h1>Danh Sách Sinh Viên</h1>
+	            <div class="ds" id="ds"></div>
+	            <div class="op" style="margin-top:310px">
+	                <div class="col-md-2"><button type="button" class="btn btn-info">Xóa</button></div>
+	                <div class="col-md-2"><button type="button" id="xuat" class="btn btn-info">Xuất</button></div>
+	                <div class="col-md-4"><button type="button" id="diemcao" class="btn btn-info">Điểm Cao Nhất</button></div>
+	                <div class="col-md-4"><button type="button" id="topdiemcao" class="btn btn-info">Top 10 Điểm Cao</button></div>           
+	        </div>
+	  
+	        <div class="timkiem col-md-12" style="background:white">
+	        <div class="group col-md-6">
+	        		<form id="key">
+	                            <input type="text" required name="email" id="keywork">
+	                            <span class="highlight"></span>
+	                            <span class="bar"></span>
+	                            <label>Tên Hoặc MSSV</label>
+	                 </form>
+	        </div>
+	        <div class="col-md-6"><button type="button" id="timkiem" class="btn btn-info">Tìm</button></div>
+	        </div>
+	        </div> 
+	<div class="col-md-6">
+	        <div class="bangdiem" id="bangdiem">
+	            <h1>Bảng Điểm Sinh Viên</h1>
+	            <table class="table table-bordered">
+	    <thead>
+	      <tr>
+	        <th>Tên Sinh Viên</th>
+	        <th>Mã Sinh Viên</th>
+	        <th>Điểm TB</th>
+	        <th>Xếp Loại</th>
+	      </tr>
+	    </thead>
+	    <tbody id="diem">
+	    
+
+	    </tbody>
+	  </table>
+	        </div>
+	    </div>
+	</div>
+	</body>
+
+	</html>
+	<script type="text/javascript">
+$(document).ready(function(){
+    $("#them").click(function(){
+        
+          var ten = $("#ten").val();
+        var email = $("#email").val();
+        var cmnd = $("#cmnd").val();
+        var mssv = $("#mssv").val();
+        var sdt = $("#sdt").val();
+        var toan = $("#toan").val();
+        var ly = $("#ly").val();
+        var hoa = $("#hoa").val();
+        // if(ten =='' || email ==''){
+        //    alert('Vui Lòng Nhập Đủ Thông Tin');
+        // }else{
+            $("#bang").addClass('bangtt1');
+        $("#bangds").addClass('bangds1');
+       $.post('/them',{ten:ten,email:email,cmnd:cmnd,mssv:mssv,sdt:sdt,toan:toan,ly:ly,hoa:hoa},function(data){
+           $("#ds").html(data);
+       });
+       $('#sv')[0].reset();
+        
+    });
+
+     $("#xuat").click(function(){
+        $("#bangdiem").addClass('bangdiem1');
+        $.post('/xuatdanhsach',function(data){
+           $("#diem").html(data);
+       });   
+    });
+
+
+     $("#diemcao").click(function(){
+       // $("#bangdiem").addClass('bangdiem1');
+        $.post('/diemcao',function(data){
+            $("#diem").html(data);
+            
+       });   
+    });
+
+     $("#topdiemcao").click(function(){
+       // $("#bangdiem").addClass('bangdiem1');
+        $.post('/topdiemcao',function(data){
+            $("#diem").html(data);
+            
+       });   
+    });
+
+   $("#timkiem").click(function(){
+     var timkiem =  $("#keywork").val();
+        $.post('/timkiem',{timkiem:timkiem},function(data){     
+        $("#diem").html(data);
+            
+       });
+        $('#key')[0].reset();
+    });
+
+});
+	</script>
